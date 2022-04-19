@@ -1,0 +1,284 @@
+
+#menu{
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Roboto', sans-serif;
+    }
+    a:visited, a:link{
+        color: black;
+        text-decoration: none;
+    } 
+    figure.home{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 0px;
+    }
+    img.logo{
+        width: 50%;
+    }
+    section.img-menu{
+        width: 100%;
+    }
+    section.img-menu img{
+        margin: 0px;
+        width: 100%;
+        height:231px;
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+    }
+    section.plat-menu{
+        border: #f2f2f2;
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px 25px 0px 0px;
+        padding-bottom: 101px;
+        position: relative;
+        z-index: 1;
+        margin-top: -36px;
+       
+        .heart-menu, .heart-full-menu{
+            display: flex;
+            position: absolute;
+            left: 40%;
+            padding-top: 25px;
+            font-size: 26px;
+        }
+        .heart-full-menu{
+            color: transparent;
+        }
+        .heart-full-menu:hover{
+            color: #9356DC;
+            transition: all .8s;
+        }
+    }
+    h2, h1{
+        margin-left: 15px;
+    }
+    h1.titre-menu{
+        font-family: 'Shrikhand', sans-serif;
+    }
+    h2{
+        text-decoration: underline #99E2D0;
+        
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+    section.plat-menu span.heart-menu, .heart-full-menu{
+        padding-left: 174px;
+    }
+    section.plat-box{
+        padding-right: 5px;
+    }
+    ul.plat{
+        padding: 0px;
+        li.menu{
+            border: white;
+            background-color: white;
+            border-radius: 25px;
+            display: flex;
+            margin-left: 5px;
+            padding-left: 10px;
+            margin-bottom: 10px;
+            animation: Fadein 3s;
+            // Apparition Menu
+            @keyframes Fadein{
+                from{
+                    opacity: 0;
+                    margin-top: 100Px;
+                }
+                to{
+                    opacity: 1;
+                    margin-top: 0px;
+                }
+            }
+            // Apparition Menu
+            div.info-plat{
+                width: 90%;
+                padding-left: 5px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                h3{
+                    padding-top: 10px;
+                    margin: 0px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+                p{
+                    margin: 0px;
+                    padding-top: 6px;
+                    padding-bottom: 10px;
+                    font-size: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+            div.prix{
+                display: flex;
+                align-items:flex-end;
+                width: 10%;
+                padding-right: 16px;
+                p{
+                    font-weight: bold;
+                }
+            }
+
+            div.checkbox{
+                background-color: #99E2D0
+                ;
+                width: 0%;
+                transition: all 1s;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0px 25px 25px 0px;
+                i.check{
+                    font-size: 25px;
+                    color: #f2f2f2;
+                    transform : rotate(0deg);
+                    transition: transform 1s;
+                    overflow: hidden;
+                }
+            }
+            &:hover div.checkbox{
+                transition: all 1s;
+                width: 20%;
+                opacity: 1;
+                i.check{
+                    transform : rotate(360deg);
+                    transition: transform 1s;
+                }
+            }
+            
+        }
+        
+    }
+    ul li{
+        font-family: 'Roboto', sans-serif;
+        list-style: none;
+    }
+    
+    li.menu-gras{
+        font-size: 20px;
+        font-weight: bold;
+        width: 250px;
+    }
+    li.menu-fin, li.menu-prix{
+        display: flex;
+    }
+    div.bouton-box{
+        display: flex;
+        justify-content: center;
+    }
+    a.bouton{
+        border-radius: 100px;
+        width: 59%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border: transparent;
+        background-image: linear-gradient(0deg, rgba(147,86,220,.9),
+        rgba(255,121,218,.9));
+        box-shadow: 0px 5px 7px 0px grey;
+        color: white;
+        font-size: 18px;
+    }
+    a.bouton:hover{
+        box-shadow: 0px 3px 3px 2px rgb(172 115 239 / 53%);
+        background-image: linear-gradient(0deg, rgb(172 115 239 / 86%), #f9a4cbf2);
+    }
+    footer{
+        border: #353535 0px solid;
+        background-color: #353535;
+        h3{
+            font-family: 'Shrikhand', sans-serif;
+            color: white;
+            font-size: 20px;
+            padding-left: 37px;
+        }
+        ul.info-footer{
+            li{
+                list-style: none;
+                justify-content: left;
+                display: flex;
+                color: white;
+                i{
+                    padding-right: 24px;
+                    font-size: 19px;
+                    color: white;
+                    width: 5px;
+                }
+                a{
+                    color: white;
+                }
+            }
+    
+        }
+    }
+}
+
+@media  screen and (min-width: 992px) {
+    #menu{
+        display: flex;
+        flex-direction: column;
+        img.restaurant-un{
+            object-fit: cover;
+            height: 280px;
+        }
+        section.plat-menu{
+            width: 100%;
+            h1{
+                margin-left: 0px;
+                display: flex;
+                justify-content: center;
+                font-size: 26px;
+            }
+            .heart-menu, .heart-full-menu{
+                left: 60%;
+                font-size: 29px;
+            }
+            section.menu-box{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: row;
+                align-items: baseline;
+                section.plat-box{
+                    width: 32%;
+                    li.menu{
+                        margin-bottom: 30px;
+                    }
+                }
+                div.bouton-box{
+                    display: flex;
+                    justify-content: center;
+                    width: 20%;
+                    button{
+                        margin-left: 0px;
+                        width: 100%;
+                    }
+                }
+            }
+            
+        }
+        footer{
+            width: 100%;
+            h3{
+                padding-left: 0px;
+                display: flex;
+                justify-content: center;
+            }
+            ul.info-footer{
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    }
+}
